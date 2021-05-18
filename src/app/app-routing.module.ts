@@ -26,11 +26,13 @@ const routes: Routes = [
 ]
 
 @NgModule({
-   imports: [
+  declarations: [],
+  imports: [
     RouterModule.forRoot(routes)
   ],
-  exports:[
+  exports: [
     RouterModule
   ]
 })
+
 export class AppRoutingModule { }
