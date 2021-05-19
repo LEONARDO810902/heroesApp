@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Heroe } from '../interfaces/heroes.interface';
 
 @Pipe({
-  name: 'imagen'
+  name: 'imagen',
+  // pure: false, para que se  dispare nuevamente el papi cuando se haga cambios en el mismo (true) es defelcto.
 })
 export class ImagenPipe implements PipeTransform {
 
