@@ -8,7 +8,14 @@ export class ImagenPipe implements PipeTransform {
 
 
   transform (Heroe: Heroe ): string {
-    return `assets/heroes/${Heroe.id}.jpg `
+
+    if(!Heroe.id && !Heroe.alt_img){
+      return 'assets/no-image.png';
+    }else if (Heroe.alt_img){
+      return Heroe.alt_img;
+    }else {
+      return `assets/heroes/${Heroe.id}.jpg `
+    }
   }
 
 }
