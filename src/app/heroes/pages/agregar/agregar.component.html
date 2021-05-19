@@ -67,14 +67,25 @@
     </mat-form-field>
 
     <br>
+    <div fxLayout>
+          <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="Guardar()">
+            <mat-icon>edit</mat-icon>
+            Agregar
+          </button>
 
-    <button
-            mat-raised-button
-            color="warn"
-            (click)="Guardar()">
-      <mat-icon>edit</mat-icon>
-      Agregar
-    </button>
+          <span class="spacer"></span>
+
+          <button *ngIf="heroe.id"
+                  mat-raised-button
+                  (click)="borrar()"
+                  color="warn">
+          <mat-icon>remove</mat-icon>
+            Borrar
+          </button>
+  </div>
 
   </div>
 
